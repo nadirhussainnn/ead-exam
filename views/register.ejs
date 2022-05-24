@@ -10,18 +10,21 @@
 
 <body>
     <%- include('layouts/header') %>
-        <h1>Register Page</h1>
 
         <div class="container">
+            <div style="margin: auto; margin-top:30px; text-align: center;">
+                <h1>Register Page</h1>
+            </div>
+            
             <form action="/api/register" method="POST" enctype="multipart/form-data">
                 <div class="row border border-lg p-4">
-                    <div class="col-md-4">
+                    <div class="col-md-4 shadow-lg p-4">
                         <div>
                             <input type="file" name="image" accept="image/*" id="imgInp" />
                             <img id="blah" src="#" alt="Selected Image" width="150px"/>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 shadow-lg ml-4 mr-4 p-4">
                         <div class="mb-3">
                             <input type="text" name="fullname" class="form-control" placeholder="Fullname">
                         </div>
@@ -39,7 +42,7 @@
                                 placeholder="Address">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 shadow-lg p-4">
                         <div class="mb-3">
                             <input type="text" name="email" class="form-control" id="exampleInputEmail1"
                                 placeholder="Email">
