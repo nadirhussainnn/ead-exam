@@ -9,6 +9,19 @@
 
 .button-anchor{
     color: black;
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: none;
+    margin:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.button-anchor2{
+    color: black;
+    background-color: red;
     padding: 10px;
     border-radius: 4px;
     font-size: large;
