@@ -36,15 +36,35 @@
                                         <span><%= data[i].fullname %></span>
                                     </div>
                                 </td>
-                                <td><%= data[i].email %></td>
-                                <td><%= data[i].phone %></td>
-                                <td><%= data[i].city %></td>
-                                <td><%= data[i].zip %></td> 
                                 <td>
-                                    <a href=<%= "/api/deleteUser?id="+data[i]._id %> class="button-anchor2">Delete</a>
+                                    <div class="mt-4">
+                                        <%= data[i].email %>
+                                    </div>
                                 </td>
                                 <td>
+                                    <div class="mt-4">
+                                    <%= data[i].phone %>
+                                        </div>
+                                </td>
+                                <td>
+                                    <div class="mt-4">
+                                    <%= data[i].city %>
+                                </div>
+                                </td>
+                                <td>
+                                    <div class="mt-4">
+                                    <%= data[i].zip %>
+                                </div>
+                                </td> 
+                                <td>
+                                    <div class="mt-4">
+                                    <a href=<%= "/api/deleteUser?id="+data[i]._id %> class="button-anchor2">Delete</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mt-4">
                                     <a href=<%= "/api/displayUpdatePage?id="+data[i]._id %> class="button-anchor">Update</a>
+                                    </div>
                                 </td>
                             </tr>
                             <% } %>

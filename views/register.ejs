@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <%- include('layouts/header')  %>
-    <h1>Register Page</h1>
+    <%- include('layouts/header') %>
+        <h1>Register Page</h1>
 
-    <div class="container">
-         <form action="/api/register" method="POST" enctype="multipart/form-data" >
-            <div class="row border border-lg p-4">
-            <div class="col-md-4">
-                <div>
-                    <input type="file" name="image" />
+        <div class="container">
+            <form action="/api/register" method="POST" enctype="multipart/form-data">
+                <div class="row border border-lg p-4">
+                    <div class="col-md-4">
+                        <div>
+                            <input type="file" name="image" accept="image/*" id="imgInp" />
+                            <img id="blah" src="#" alt="Selected Image" width="150px"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <input type="text" name="fullname" class="form-control" placeholder="Fullname">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="phone" class="form-control" id="exampleInputEmail1"
+                                placeholder="Phone">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="state" class="form-control" id="exampleInputEmail1"
+                                placeholder="State/Region">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" name="address" class="form-control" id="exampleInputEmail1"
+                                placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <input type="text" name="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Email">
+                        </div>
+
+                        <select name="country" class="mb-4">
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Pakistan">UAE</option>
+                            <option value="Pakistan">Australia</option>
+                        </select>
+
+                        <div class="mb-3">
+                            <input type="text" name="city" class="form-control" placeholder="City">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="zip" class="form-control" placeholder="Zipcode">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Add User</button>
+                        </div>
+    
+                    </div>
                 </div>
-            </div>
-            
-            <div class="col-md-8">
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                             <input type="text" name="fullname" class="form-control" placeholder="Fullname">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Phone">
-                       </div>
-                       <div class="mb-3">
-                        <input type="text" name="state" class="form-control" id="exampleInputEmail1" placeholder="State/Region">
-                       </div>
- 
-                       <div class="mb-3">
-                        <input type="text" name="address" class="form-control" id="exampleInputEmail1" placeholder="Address">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                            <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                       </div>
-
-                       <select name="country" class="mb-4">
-                           <option value="Pakistan">Pakistan</option>
-                           <option value="Pakistan">UAE</option>
-                           <option value="Pakistan">Australia</option>
-                       </select>
-
-                       <div class="mb-3">
-                        <input type="text" name="city" class="form-control" placeholder="City">
-                       </div>
-                       <div class="mb-3">
-                        <input type="text" name="zip" class="form-control" placeholder="Zipcode">
-                       </div>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Add User</button>
-                    </div>
-        
-            </div>
+            </form>
         </div>
-        </form>
-    </div>
+        <script>
+            imgInp.onchange = evt => {
+                const [file] = imgInp.files
+                if (file) {
+                    blah.src = URL.createObjectURL(file)
+                }
+            }
+        </script>
 </body>
+
 </html>

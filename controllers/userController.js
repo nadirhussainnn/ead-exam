@@ -32,7 +32,7 @@ const displayAllUsersPage = async (req, res) => {
 const deleteUser = async (req, res) => {
     const {id}=req.query
     const deletedUser=await User.findByIdAndRemove(id)
-    const data=await Todo.find()
+    const data=await User.find()
     res.render('displayAllUsers', {data:data})
 };
 

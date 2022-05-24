@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <%- include('layouts/header')  %>
-    <h1>Register Page</h1>
+    <%- include('layouts/header') %>
+        <h1>Register Page</h1>
 
-    <div class="container">
-         <form action=<%= "/api/updateUser?id="+data._id %> method="POST" enctype="multipart/form-data" >
-            <div class="row border border-lg p-4">
-            <div class="col-md-4">
-                <div>
-                    <img src=<%='/images/'+data.image  %> width="150px" /> 
-                </div>
-                <div>
-                    <input type="file" name="image" />
-                </div>
-            </div>
-            
-            <div class="col-md-8">
+        <div class="container">
+            <form action=<%="/api/updateUser?id=" +data._id %> method="POST" enctype="multipart/form-data" >
+                <div class="row border border-lg p-4">
                     <div class="col-md-4">
-                        <div class="mb-3">
-                             <input type="text" name="fullname" class="form-control" value=<%=data.fullname%>>
+                        <div>
+                            <img src=<%='/images/' +data.image %> width="150px" />
                         </div>
-                        <div class="mb-3">
-                            <input type="text" name="phone" class="form-control" id="exampleInputEmail1" value=<%=data.phone%>>
-                       </div>
-                       <div class="mb-3">
-                        <input type="text" name="state" class="form-control" id="exampleInputEmail1" value=<%=data.state%>>
-                       </div>
- 
-                       <div class="mb-3">
-                        <input type="text" name="address" class="form-control" id="exampleInputEmail1" value=<%=data.address%>>
+                        <div>
+                            <input type="file" name="image" />
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                            <input type="text" name="email" class="form-control" id="exampleInputEmail1" value=<%=data.email%>>
-                       </div>
 
-                       <select name="country" class="mb-4">
-                           <option value="Pakistan">Pakistan</option>
-                           <option value="Pakistan">UAE</option>
-                           <option value="Pakistan">Australia</option>
-                       </select>
+                    <div class="col-md-8">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <input type="text" name="fullname" class="form-control" value=<%=data.fullname%>>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="phone" class="form-control" id="exampleInputEmail1"
+                                    value=<%=data.phone%>>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="state" class="form-control" id="exampleInputEmail1"
+                                    value=<%=data.state%>>
+                            </div>
 
-                       <div class="mb-3">
-                        <input type="text" name="city" class="form-control" placeholder="City" value=<%=data.city%>>
-                       </div>
-                       <div class="mb-3">
-                        <input type="text" name="zip" class="form-control" placeholder="Zipcode" value=<%=data.zip%>>
-                       </div>
+                            <div class="mb-3">
+                                <input type="text" name="address" class="form-control" id="exampleInputEmail1"
+                                    value=<%=data.address%>>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <input type="text" name="email" class="form-control" id="exampleInputEmail1"
+                                    value=<%=data.email%>>
+                            </div>
+
+                            <select name="country" class="mb-4">
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="Pakistan">UAE</option>
+                                <option value="Pakistan">Australia</option>
+                            </select>
+
+                            <div class="mb-3">
+                                <input type="text" name="city" class="form-control" placeholder="City"
+                                    value=<%=data.city%>>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="zip" class="form-control" placeholder="Zipcode"
+                                    value=<%=data.zip%>>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Update User</button>
+                        </div>
+
                     </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Update User</button>
-                    </div>
-        
-            </div>
+                </div>
+            </form>
         </div>
-        </form>
-    </div>
 </body>
 </html>
