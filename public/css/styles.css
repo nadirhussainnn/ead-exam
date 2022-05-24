@@ -1,0 +1,23 @@
+.nav-container{
+    background-color: beige;
+    padding: 10px;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.button-anchor{
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: none;
+    margin:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.button-anchor:hover{
+    color: blue;
+}
